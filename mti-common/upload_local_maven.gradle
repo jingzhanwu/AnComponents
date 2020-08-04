@@ -12,8 +12,8 @@ artifacts {
 }
 
 //这几个定义也可以放在 各自module下的 gradle.properties文件中
-def GROUP_ID = "com.mti"
-def ARTIFACT_ID = "components"
+def GROUP_ID = "com.components"
+def ARTIFACT_ID = "common"
 def VERSION = "1.0.0"
 
 //上传到Maven仓库的task
