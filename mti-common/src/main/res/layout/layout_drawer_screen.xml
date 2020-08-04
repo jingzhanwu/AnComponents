@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screenLayout"
+    style="@style/match_parent"
+    android:layout_width="320dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_marginTop="@dimen/size_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_back_black"
+            android:padding="@dimen/size_10"
+            android:layout_width="@dimen/size_40"
+            android:layout_height="@dimen/size_40" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/wrap_content"
+            android:layout_centerInParent="true"
+            android:text="筛选"
+            android:textColor="@color/black_content"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        style="@style/match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/screenContentLayout"
+            style="@style/match_parent"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/size_12"
+            android:paddingEnd="@dimen/size_14" />
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        style="@style/match_width"
+        android:layout_height="@dimen/size_44"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvReset"
+            style="@style/match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="#1E1E1E" />
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            style="@style/match_parent"
+            android:layout_weight="1"
+            android:background="@color/black_content"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

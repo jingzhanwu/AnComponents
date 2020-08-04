@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/size_10"
+    android:paddingTop="@dimen/size_20"
+    android:paddingBottom="@dimen/size_10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/level1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一级警情"
+            android:textColor="@color/black_content"
+            android:textSize="13sp" />
+
+        <com.mti.component.common.HorizontalProgressComponent
+            android:id="@+id/alarm1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/level1"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_marginRight="@dimen/size_20"
+            android:layout_toLeftOf="@+id/value1"
+            app:zpb_bg_color="#F3F3F3"
+            app:zpb_max="2000"
+            app:zpb_pb_color="#E35D67"
+            app:zpb_progress="1451" />
+
+        <TextView
+            android:id="@+id/value1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/level1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size_2"
+            android:text="1415件"
+            android:textColor="#E35D67"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_10">
+
+        <TextView
+            android:id="@+id/level2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="二级警情"
+            android:textColor="@color/black_content"
+            android:textSize="13sp" />
+
+        <com.mti.component.common.HorizontalProgressComponent
+            android:id="@+id/alarm2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/level2"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_marginRight="@dimen/size_20"
+            android:layout_toLeftOf="@+id/value2"
+            app:zpb_bg_color="#F3F3F3"
+            app:zpb_max="2000"
+            app:zpb_pb_color="#FDAB65"
+            app:zpb_progress="1018" />
+
+        <TextView
+            android:id="@+id/value2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/level2"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size_2"
+            android:text="1018件"
+            android:textColor="#E35D67"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_10">
+
+        <TextView
+            android:id="@+id/level3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="三级警情"
+            android:textColor="@color/black_content"
+            android:textSize="13sp" />
+
+        <com.mti.component.common.HorizontalProgressComponent
+            android:id="@+id/alarm3"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/level3"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_marginRight="@dimen/size_20"
+            android:layout_toLeftOf="@+id/value3"
+            app:zpb_bg_color="#F3F3F3"
+            app:zpb_max="2000"
+            app:zpb_pb_color="#F3CF09"
+            app:zpb_progress="514" />
+
+        <TextView
+            android:id="@+id/value3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/level3"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size_2"
+            android:text="514件"
+            android:textColor="#E35D67"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_10">
+
+        <TextView
+            android:id="@+id/level4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="四级警情"
+            android:textColor="@color/black_content"
+            android:textSize="13sp" />
+
+        <com.mti.component.common.HorizontalProgressComponent
+            android:id="@+id/alarm4"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/level4"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_marginRight="@dimen/size_20"
+            android:layout_toLeftOf="@+id/value4"
+            app:zpb_bg_color="#F3F3F3"
+            app:zpb_max="2000"
+            app:zpb_pb_color="#03CED6"
+            app:zpb_progress="867" />
+
+        <TextView
+            android:id="@+id/value4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/level4"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size_2"
+            android:text="867件"
+            android:textColor="#E35D67"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginTop="@dimen/size_16"
+        android:text="展示效果"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginRight="@dimen/size_16"
+        android:text="筛选组件，主要包括下拉筛选和侧滑筛选模式"
+        android:textColor="@color/black_hint"
+        android:textSize="@dimen/text_size_normal" />
+
+    <FrameLayout style="@style/match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            style="@style/match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                style="@style/match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/size_20">
+
+                <TextView
+                    android:id="@+id/layoutCondition"
+                    style="@style/match_width"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/size_10"
+                    android:text="选择条件"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabDrawer"
+            style="@style/wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:src="@drawable/ic_screen"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="#D81B60" />
+    </FrameLayout>
+</LinearLayout>

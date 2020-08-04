@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginTop="@dimen/size_16"
+        android:text="展示效果"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginRight="@dimen/size_16"
+        android:text="拨号盘组件，主要适用于拨打电话"
+        android:textColor="@color/black_hint"
+        android:textSize="@dimen/text_size_normal" />
+
+    <FrameLayout style="@style/match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            style="@style/match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                style="@style/match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/size_20">
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/tvEffectShow"
+            android:layout_width="@dimen/size_80"
+            android:layout_height="@dimen/size_80"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="@dimen/size_14"
+            android:gravity="center"
+            android:translationZ="@dimen/size_4"
+            app:cardBackgroundColor="#FA3F7F"
+            app:cardCornerRadius="@dimen/size_40">
+
+            <TextView
+                style="@style/wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="拨号盘"
+                android:textColor="@color/white" />
+        </android.support.v7.widget.CardView>
+
+
+    </FrameLayout>
+</LinearLayout>

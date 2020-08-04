@@ -1,0 +1,109 @@
+
+## 如何使用
+这里提供下拉筛选组件，与其他组件不同，依赖业务组件中FlowComponent组件。
+这里以下拉筛选组件为例说明，侧滑筛选组件DrawerConditionPopupComponent 类似
+### 下拉筛选组件WaterfallConditionPopupComponent
+
+#### 1.构造数据
+在设置监听之后或者时间接口请求数据后开启startTimer
+```
+    private fun createData() {
+        //组织机构
+
+        var organizationsGroup = createScreenGroup("组织机构", "organizations", organizations)
+        conditions.add(organizationsGroup)
+
+        //组件
+        var componentsGroup = createScreenGroup("业务组件", "components", components,multiple = true)
+        conditions.add(componentsGroup)
+        //应用案例
+        var casesGroup = createScreenGroup("应用案例", "cases", cases,optional =false)
+        conditions.add(casesGroup)
+
+    }
+
+    /**
+     * 构建条件
+     */
+    private fun createScreenGroup(title: String,
+                                  key: String,
+                                  components: Array<String>,
+                                  showingDelete: Boolean = false,
+                                  optional: Boolean = true,
+                                  multiple: Boolean = false): ScreenGroup {
+        //条件
+        var group = ScreenGroup()
+                //组名称
+                .title(title)
+                //组id
+                .key(key)
+                //是否显示删除按钮
+                .showingDelete(showingDelete)
+                //是否可执行选中操作，如单选、多选，optional=false ,不能执行选择操作。
+                .optional(optional)
+                //是否多选，multiple=true,多选，multiple=false,单选
+                .multiple(multiple)
+        var tags = components.map {
+            var tag = TagEntry(it)
+            tag.groupId = group.key
+            tag.tagValue = it
+            return@map tag
+        }.toList()
+        return group.tags(tags)
+    }
+```
+
+#### 2.监听显示
+在设置监听之后或者时间接口请求数据后开启startTimer
+```    
+override fun initViews(savedInstanceState: Bundle?) {
+        //点击监听显示
+        layoutCondition.setOnClickListener {
+            if (waterfallPopupView == null) {
+                initWaterfallScreenUi()
+            }
+            waterfallPopupView!!.show()
+        }
+        //初始化下拉筛选组件
+        initWaterfallScreenUi()
+    }
+```
+
+
+#### 3.下拉筛选组件初始化
+
+初始化下拉筛选条件弹窗
+```
+    private fun initWaterfallScreenUi() {
+        //构建数据
+        createData()
+        //创建下拉弹窗组件
+        waterfallDrawerPopupComponent = WaterfallDrawerPopupComponent(this,conditions)
+        //设置监听
+        waterfallDrawerPopupComponent.addWaterFallChangedListener(object :OnWaterFallChangedListener{
+            //选中监听，单选，多选时触发该监听，前置条件 optional=true,即可执行选中操作，单选、多选
+            override fun onItemCheckedChanged(position: Int, entry: TagEntry?) {
+                toast("您点击了第$position 个,${entry?.tagName}")
+                layoutCondition.text = "选择结果：${entry?.tagName}"
+                Log.d("screen---", "selection:" + waterfallDrawerPopupComponent.selections)
+            }
+            //点击监听
+            override fun onItemClickChanged(position: Int, entry: TagEntry?) {
+                super.onItemClickChanged(position, entry)
+            }
+        })
+        waterfallPopupView = com.lxj.xpopup.XPopup.Builder(this)
+                //设置锚点
+                .atView(layoutCondition)
+                .popupPosition(PopupPosition.Bottom)
+                .asCustom(waterfallDrawerPopupComponent)
+    }
+```
+
+
+
+
+
+
+
+

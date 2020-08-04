@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--通用背景色-->
+    <color name="common_bg">#F6F7FB</color>
+
+    <color name="white">#FFFFFF</color>   <!-- 纯白色-->
+    <color name="black">#000000</color> <!--纯黑色 一般不用-->
+    <color name="black_title">#111111</color>  <!--标题色-->
+    <color name="black_content">#333333</color>     <!--正文  文章内容用色-->
+    <color name="black_subtitle">#666666</color>  <!--标题下方文字用色 -->
+    <color name="black_hint">#999999</color>  <!--特别淡的文字用色 -->
+    <color name="gray_font_dark">#646464</color>
+
+    <color name="gray">#cccccc</color><!--灰色，item点击的颜色-->
+    <color name="tab_normal_color">#0081F9</color>
+    <color name="tab_selected_color">#0165C2</color>
+</resources>

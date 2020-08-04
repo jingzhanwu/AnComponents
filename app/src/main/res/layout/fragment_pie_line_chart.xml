@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_20">
+
+        <LinearLayout
+            android:id="@+id/layout11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:background="#ffac41" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="巡特警"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout11"
+            android:layout_marginTop="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:background="#29cece" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="交警"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout12"
+            android:layout_marginTop="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:background="#01a968" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="反恐"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout13"
+            android:layout_marginTop="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:background="#379cf8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="民警"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout14"
+            android:layout_marginTop="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:background="#2a6dbf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="辅警"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/pieChartView"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_20"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:background="#33ff99" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="电信咋骗"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout1"
+            android:layout_marginTop="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:background="#ff6633" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="入室盗窃"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout2"
+            android:layout_marginTop="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:background="#0081F9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="盗窃车内物品"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout3"
+            android:layout_marginTop="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:background="#FF0033" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="盗窃电动车"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/ringChartView"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+</LinearLayout>

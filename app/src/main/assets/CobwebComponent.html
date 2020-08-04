@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="custom" type="text/css"></style>
+    <link rel="stylesheet" href="mark.css" type="text/css">
+</head>
+<body marginheight="0"><h2>如何使用</h2>
+<p>这里提供具有科技感的蛛网背景效果
+</p>
+<h3>蛛网背景组件</h3>
+<h4>1.布局使用</h4>
+<pre><code>&lt;com.mti.component.common.CobwebComponent
+                android:id="@+id/cobWebComponent"
+                android:layout_height="@dimen/size_300"
+                style="@style/match_width" /&gt;
+
+    override fun initViews(savedInstanceState: Bundle?) {
+        setToolbarTitle("CobwebComponent")
+        showToolbarBackView()
+        cobWebComponent.lineWidth = 5
+        setMarkdownData("CobwebComponent.html", webView)
+    }</code></pre>
+<h4>2.主要属性</h4>
+<pre><code>    override fun initViews(savedInstanceState: Bundle?) {
+        cobWebComponent.lineWidth = 5
+    }</code></pre>
+<ul>
+    <li>lineWidth：线的数量</li>
+    <li>pointNum：默认小球数量</li>
+</ul>
+<p>其他属性参考源码
+</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="custom" type="text/css"></style>
+    <link rel="stylesheet" href="mark.css" type="text/css">
+</head>
+<body marginheight="0">
+<h2>如何使用</h2>
+<h4>1.功能特点</h4>
+<ul>
+    <li>滑动调节播放进度，声音，亮度</li>
+    <li>调整显示比例</li>
+    <li>倍速播放</li>
+    <li>列表小窗悬浮播放</li>
+    <li>多路播放器同时播放</li>
+    <li>Android8.0 画中画</li>
+    <li>预加载，播放缓存</li>
+    <li>视频截图</li>
+</ul>
+<h4>1.布局使用</h4>
+<p>注意：一定要指定宽高
+</p>
+<pre><code> &lt;com.dueeeke.videoplayer.player.VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_marginTop="@dimen/size_10" /&gt;</code></pre>
+<h4>2.代码调用</h4>
+<h5>第一步，初始化播放器，设置播放controller，标题等</h5>
+<pre><code>private fun initVideoView() {
+        videoView.setUrl("https://gslb.miaopai.com/stream/IR3oMYDhrON5huCmf7sHCfnU5YKEkgO2.mp4")
+        var controller = StandardVideoController&lt;VideoView&lt;IjkPlayer&gt;&gt;(this)
+        controller.setTitle("VideoRecordComponent")
+        videoView.setVideoController(controller)
+    }</code></pre>
+<h5>第二步，播放指定url的视频，本地与网络都支持</h5>
+<pre><code>   /**
+     * videoView 播放视频
+     */
+    private fun playVideoView(url: String) {
+        videoView.setUrl(url)
+        videoView.start()
+    }</code></pre>
+</body>
+</html>

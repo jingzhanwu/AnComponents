@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/match_parent">
+
+    <ScrollView
+        style="@style/match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:ignore="MissingDefaultResource">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_13"
+                android:layout_marginTop="@dimen/size_16"
+                android:text="效果展示"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_13"
+                android:layout_marginRight="@dimen/size_16"
+                android:text="进度加载组件，包括背景加载组件和直线加载组件"
+                android:textColor="@color/black_hint"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <LinearLayout
+                style="@style/match_width"
+                android:layout_marginTop="@dimen/size_10"
+                android:background="#060E25"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/size_10"
+                android:paddingBottom="@dimen/size_10">
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.mti.component.common.BackgroundLoadingEffectComponent
+                        android:id="@+id/backgroundLoadingEffectComponent"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_80" />
+
+                    <LinearLayout
+                        style="@style/match_width"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/size_20"
+                        android:layout_marginEnd="@dimen/size_20"
+                        android:divider="@drawable/bg_shape_base_v_line"
+                        android:dividerPadding="@dimen/size_4"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/size_10"
+                        android:paddingEnd="@dimen/size_10"
+                        android:showDividers="middle">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/size_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/wrap_content"
+                                android:text="活动日"
+                                android:textColor="#84CAF7"
+                                android:textSize="@dimen/text_size_normal" />
+
+                            <TextView
+                                android:id="@+id/tvFestival"
+                                style="@style/wrap_content"
+                                android:layout_marginTop="@dimen/size_2"
+                                android:text="节假日"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/size_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/wrap_content"
+                                android:text="敏感时段"
+                                android:textColor="#84CAF7"
+                                android:textSize="@dimen/text_size_normal" />
+
+                            <TextView
+                                android:id="@+id/tvTimePeriod"
+                                style="@style/wrap_content"
+                                android:layout_marginTop="@dimen/size_2"
+                                android:text="上班高峰"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/size_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/wrap_content"
+                                android:text="四色等级"
+                                android:textColor="#84CAF7"
+                                android:textSize="@dimen/text_size_normal" />
+
+                            <TextView
+                                android:id="@+id/tvLevel"
+                                style="@style/wrap_content"
+                                android:layout_marginTop="@dimen/size_2"
+                                android:text="黄色预警"
+                                android:textColor="#FFCD03"
+                                android:textSize="@dimen/text_size_normal" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <com.mti.component.common.PathEffectDividerComponent
+                    android:id="@+id/pathDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_4"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:layout_marginTop="@dimen/size_12"
+                    android:layout_marginEnd="@dimen/size_20" />
+
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        style="@style/wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:onClick="reset"
+        android:src="@mipmap/ic_reset"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:rippleColor="#D81B60"
+        app:pressedTranslationZ="12dp" />
+</FrameLayout>

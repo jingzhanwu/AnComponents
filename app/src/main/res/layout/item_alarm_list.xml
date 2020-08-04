@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/size_10"
+    android:layout_marginBottom="@dimen/size_10"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/size_16"
+        android:paddingVertical="@dimen/size_14">
+
+        <TextView
+            android:id="@+id/tvAlarmLevel"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_6"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvAlarmContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:maxLines="1"
+                android:text="今飞凯达讲课费尽快答复卡夫卡的"
+                android:textColor="@color/black_content"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/tvAlarmTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAlarmContent"
+                android:layout_marginTop="@dimen/size_6"
+                android:maxLines="1"
+                android:text="2019-12-12 12:20:20"
+                android:textColor="@color/black_hint"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+
+            <TextView
+                android:id="@+id/tvAlarmType"
+                android:layout_width="58dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_alarm_type_bg"
+                android:gravity="center"
+                android:text="交通"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvFeedback"
+                android:layout_width="58dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/tvAlarmType"
+                android:layout_marginTop="@dimen/size_12"
+                android:gravity="center"
+                android:text="已到达"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

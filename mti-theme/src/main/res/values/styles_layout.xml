@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 宽度充满父控件， 高度包裹内容 -->
+    <style name="match_width">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 高度充满父控件， 宽度包裹内容 -->
+    <style name="match_height">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 宽度，高度 包裹内容 -->
+    <style name="wrap_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 充满父控件 -->
+    <style name="match_parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- scrollView控制-->
+    <style name="common_scroll_view" parent="match_parent">
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:fillViewport">true</item>
+    </style>
+</resources>

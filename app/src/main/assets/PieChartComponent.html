@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="custom" type="text/css"></style>
+    <link rel="stylesheet" href="mark.css" type="text/css">
+</head>
+<body marginheight="0"><h1>饼图图表使用</h1>
+<h2>如何使用</h2>
+<p>由于需要配置的属性比较多，所以这里使用Builder设计模式让调用者更加便捷
+
+</p>
+<h4>1.属性与方法说明（这里只列举比较常用的，属性对应同名方法）</h4>
+<p>PieChartView pieChartView： //图表view
+
+</p>
+<p>Map
+    <float
+            , integer=""> sliceValues： //数据，key=值，value=对应颜色值
+
+    </float,>
+</p>
+<p>String centerText1： //圆环中间文本1
+
+</p>
+<p>String centerText2： //圆环中间文本2
+
+</p>
+<p>int centerText1Color = Color.BLACK： //text1的颜色
+
+</p>
+<p>int centerText2Color = Color.BLACK： //text2的颜色
+
+</p>
+<p>int centerText1FontSize = 18： //text1的字体大小，sp
+
+</p>
+<p>int centerText2FontSize = 12： //text2的字体大小，sp
+
+</p>
+<p>boolean hasLabels： //是否显示数据label文本，此属性和hasLabelForSelected是互斥的
+
+</p>
+<p>boolean hasLabelsOutside： //外圈是否显示label文本
+
+</p>
+<p>boolean hasCenterCircle： //是否中间是空圆形
+
+</p>
+<p>boolean hasCenterText1： //空心圆中间是否显示一个文本
+
+</p>
+<p>boolean hasCenterText2： //空心圆中间是否显示两行文本
+
+</p>
+<p>boolean hasLabelForSelected：//点击选中的时候是否显示对应的label，和hasLabels是互斥的
+
+</p>
+<p>int slicesSpacing： //项与项之间的间距
+
+</p>
+<p>boolean useDefaultFontTypeface： //是否使用默认的字体库
+
+</p>
+<h4>2.布局使用</h4>
+<pre><code> &lt;lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/pieChartView"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" /&gt;</code></pre>
+<h4>3.代码调用</h4>
+<h5>3.1 饼状图</h5>
+<pre><code>    /**
+     * 饼状图表
+     */
+    private fun pieChartViewRender() {
+        var data = mutableMapOf&lt;Float, Int&gt;(
+                pieData[0] to Color.parseColor("#ffac41"),
+                pieData[1] to Color.parseColor("#2a6dbf"),
+                pieData[2] to Color.parseColor("#29cece"),
+                pieData[3] to Color.parseColor("#379cf8"),
+                pieData[4] to Color.parseColor("#01a968")
+        )
+        PieChartRender.Builder()
+                .chartView(pieChartView)
+                .sliceValues(data)
+                .hasLabels(false)
+                .hasCenterCircle(false)
+                .hasLabelForSelected(true)
+                .build()
+                .render()
+    }</code></pre>
+<h5>3.2 环形图</h5>
+<pre><code>    /**
+     * 环形图表
+     */
+    private fun ringChartViewRender() {
+        var data = mutableMapOf&lt;Float, Int&gt;(
+                ringData[0] to Color.parseColor("#FF0033"),
+                ringData[1] to Color.parseColor("#ff6633"),
+                ringData[2] to Color.parseColor("#33ff99"),
+                ringData[3] to Color.parseColor("#cc00ff")
+        )
+        PieChartRender.Builder()
+                .chartView(ringChartView)
+                .sliceValues(data)
+                .hasLabels(true)
+                .hasCenterCircle(true)
+                .hasCenterText1(true)
+                .hasCenterText2(true)
+                .centerText1("MTI")
+                .centerText2("警情统计")
+                .hasLabelForSelected(false)
+                .build()
+                .render()
+    }</code></pre>
+<h4>4.点击事件</h4>
+<pre><code>  pieChartView.onValueTouchListener = object : PieChartOnValueSelectListener {
+            override fun onValueSelected(arcIndex: Int, value: SliceValue?) {
+
+            }
+
+            override fun onValueDeselected() {
+            }
+        }</code></pre>
+</body>
+</html>

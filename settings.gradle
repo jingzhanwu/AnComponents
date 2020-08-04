@@ -1,0 +1,8 @@
+rootProject.name='MtiComponentMaster'
+include ':app'
+include ':mti-media'
+include ':mti-comprehensive'
+include ':mti-common'
+include ':mti-extend'
+include ':mti-theme'
+include ':mti-calendar'

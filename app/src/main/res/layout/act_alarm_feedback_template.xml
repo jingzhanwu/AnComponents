@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 图片-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_4radius_shape"
+            android:padding="@dimen/size_10">
+
+            <View
+                android:id="@+id/labelPic"
+                android:layout_width="4dp"
+                android:layout_height="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/size_6"
+                android:layout_toRightOf="@+id/labelPic"
+                android:includeFontPadding="false"
+                android:text="图片"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <com.mti.component.common.image.ImageAddComponent
+                android:id="@+id/imageComponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelPic"
+                android:layout_marginTop="@dimen/size_10" />
+        </RelativeLayout>
+
+        <!-- 视频-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_4radius_shape"
+            android:padding="@dimen/size_10">
+
+            <View
+                android:id="@+id/labelVideo"
+                android:layout_width="4dp"
+                android:layout_height="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/size_6"
+                android:layout_toRightOf="@+id/labelVideo"
+                android:includeFontPadding="false"
+                android:text="视频"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <com.mti.component.common.image.ImageAddComponent
+                android:id="@+id/videoImageComponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelVideo"
+                android:layout_marginTop="@dimen/size_10" />
+        </RelativeLayout>
+
+        <!-- 录音-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_4radius_shape"
+            android:padding="@dimen/size_10">
+
+            <View
+                android:id="@+id/labelAudio"
+                android:layout_width="4dp"
+                android:layout_height="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_6"
+                android:layout_toRightOf="@+id/labelAudio"
+                android:includeFontPadding="false"
+                android:text="录音"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <com.mti.component.media.audio.AudioComponent
+                android:id="@+id/audioComponent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelAudio"
+                android:layout_marginTop="@dimen/size_10" />
+
+            <ImageView
+                android:id="@+id/ivAudioRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/audioComponent"
+                android:layout_marginTop="@dimen/size_10"
+                android:src="@drawable/ic_audio_record" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_4radius_shape"
+            android:padding="@dimen/size_10">
+
+            <com.mti.component.common.InputComponent
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputBackground="@color/white"
+                app:inputHintText="输入反馈内容"
+                app:inputMinHeight="100dp"
+                app:openEdit="true"
+                app:showLabel="false" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnFeedback"
+            android:layout_width="300dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_30"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_normal_bg_shape"
+            android:text="提交反馈"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

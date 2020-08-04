@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginTop="@dimen/size_16"
+        android:text="展示效果"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginRight="@dimen/size_16"
+        android:text="蜘蛛网背景组件，主要适用于展现科技感背景"
+        android:textColor="@color/black_hint"
+        android:textSize="@dimen/text_size_normal" />
+
+
+<!--    <android.support.v4.widget.NestedScrollView-->
+<!--        style="@style/match_parent"-->
+<!--        android:fillViewport="true">-->
+
+        <LinearLayout
+            style="@style/match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/size_20">
+
+            <com.moxun.tagcloudlib.view.TagCloudView
+                android:id="@+id/tagCloudView"
+                style="@style/wrap_content"
+                android:layout_height="@dimen/size_230"
+                android:layout_margin="@dimen/size_10"
+                app:autoScrollMode="uniform"
+                app:darkColor="@color/colorPrimary"
+                app:lightColor="@color/colorPrimaryDark"
+                app:radiusPercent="0.6"
+                app:scrollSpeed="3" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                style="@style/match_width">
+                <Button
+                    android:id="@+id/btnText"
+                    android:text="文本"
+                    style="@style/wrap_content"/>
+                <Button
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:id="@+id/btnPicture"
+                    android:text="图片"
+                    style="@style/wrap_content"/>
+            </LinearLayout>
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+<!--    </android.support.v4.widget.NestedScrollView>-->
+
+</LinearLayout>

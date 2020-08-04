@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion compile_sdk
+    defaultConfig {
+        applicationId "com.mti.component.master"
+        minSdkVersion minsdk_version
+        targetSdkVersion compile_sdk
+        versionCode 100
+        versionName "E1.0.0"
+        //v7包中会有多种语言，但是只会用到中文，所以只保留中文，剔除其他的
+        resConfigs('zh-rCN')
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def buildName = "CommonComponents"
+            def type = variant.buildType.name
+            def apkName = buildName + "_" + type + "_" + versionName + ".apk"
+            outputFileName = apkName
+        }
+    }
+
+    //多渠道打包，需指定一个渠道维度，这里为 “version"维度
+    //productFlavors 中不指定的属性都是使用默认配置的值
+//    flavorDimensions "version"
+//    productFlavors {
+//        dev {
+//            dimension "version"
+//            applicationIdSuffix ".dev"
+//            versionNameSuffix "-dev"
+//        }
+//        pro {
+//            dimension "version"
+//            applicationIdSuffix ".pro"
+//            versionNameSuffix "-pro"
+//        }
+//    }
+
+    //配置java8的支持，Android studio4.0加入的功能
+    compileOptions {
+        // Flag to enable support for the new language APIs
+//        coreLibraryDesugaringEnabled true
+        // Sets Java compatibility to Java 8
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // For Kotlin projects
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    //解决 PictureSelector和Rxjava冲突
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    lintOptions {
+        //忽略 link 检查
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //java8 核心库支持
+//    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.5'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:design:$support_version"
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta8'
+
+    implementation project(":mti-common")
+    implementation project(':mti-calendar')
+    implementation project(":mti-media")
+    implementation project(":mti-comprehensive")
+    implementation project(":mti-extend")
+    implementation project(":mti-theme")
+
+    implementation 'com.zzhoujay.richtext:richtext:3.0.8'
+    implementation 'com.zzhoujay:html:1.0.2'
+    /*banner 轮播*/
+    api 'com.youth.banner:banner:1.4.10'
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    /*3dtag标签*/
+    implementation 'com.moxun:tagcloudlib:1.2.1'
+    /*侧边栏索引*/
+    implementation 'com.github.mcxtzhang:SuspensionIndexBar:V1.0.0'
+
+    /*图片选择器*/
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    // SmartRefreshLayout 注意：分包之后不会有默认的Header和Footer需要手动添加！还是原来的三种方法！
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.1'      //核心必须依赖
+    implementation  'com.scwang.smart:refresh-header-classics:2.0.1'    //经典刷新头
+    implementation  'com.scwang.smart:refresh-header-radar:2.0.1'       //雷达刷新头
+    implementation  'com.scwang.smart:refresh-header-falsify:2.0.1'     //虚拟刷新头
+    implementation  'com.scwang.smart:refresh-header-material:2.0.1'    //谷歌刷新头
+    implementation  'com.scwang.smart:refresh-header-two-level:2.0.1'   //二级刷新头
+    implementation  'com.scwang.smart:refresh-footer-ball:2.0.1'        //球脉冲加载
+    implementation  'com.scwang.smart:refresh-footer-classics:2.0.1'    //经典加载
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+}
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+}

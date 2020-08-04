@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="custom" type="text/css"></style>
+    <link rel="stylesheet" href="mark.css" type="text/css">
+</head>
+<body marginheight="0">
+<h2>如何使用</h2>
+<h4>1.属性说明</h4>
+<ul>
+    <li>nice9_itemMargin：item之间的间距</li>
+    <li>nice9_candrag：是否支持拖拽，默认为false</li>
+    <li>nice9_tipText：提示文本</li>
+    <li>nice9_tipColor：提示文本颜色</li>
+    <li>nice9_tipBgColor：提示文本背景色</li>
+    <li>nice9_tipBgDrawable：提示文本背景drawable</li>
+</ul>
+<h4>1.属性方法说明</h4>
+<ul>
+    <li>bindData(List
+        <string> pictures)：绑定要显示的数据</string>
+    </li>
+    <li>setCanDrag(boolean canDrag)：设置是否可以拖拽</li>
+    <li>setItemDelegate(ItemDelegate itemDelegate)：设置item的代理，这里为点击回调</li>
+    <li>List
+        <string> getAfterPicList()：获取更改后的图片列表</string>
+    </li>
+    <li>setTipBgDrawable(Drawable tipBgDrawable)：设置提示文字背景</li>
+    <li>setTipColor(int tipBgColor)：设置提示文字颜色</li>
+    <li>setTipBgColor(int tipBgColor)：设置提示背景颜色</li>
+    <li>setTipText(String string)：设置提示文字</li>
+</ul>
+<h4>2.布局使用</h4>
+<pre><code> &lt;com.mti.component.common.nice9.ImageNice9Component 
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ivNice9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:nice9_candrag="true"
+        app:nice9_itemMargin="@dimen/size_4"
+        app:nice9_tipColor="@color/black_hint"
+        app:nice9_tipText="长按拖拽调整位置" /&gt;</code></pre>
+</body>
+</html>

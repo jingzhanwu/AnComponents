@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/wrap_content"
+    android:layout_marginTop="@dimen/size_20"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="horizontal">
+
+    <LinearLayout style="@style/wrap_content"
+        android:layout_marginTop="@dimen/size_14"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTagName"
+            style="@style/wrap_content"
+            android:background="@drawable/label_tag_selector"
+            android:gravity="center"
+            android:paddingStart="@dimen/size_16"
+            android:paddingTop="@dimen/size_8"
+            android:paddingEnd="@dimen/size_16"
+            android:paddingBottom="@dimen/size_8"
+            android:text="测试"
+            android:textColor="@color/gray_font_dark" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="@dimen/size_36"
+            android:layout_height="@dimen/size_36"
+            android:layout_gravity="top"
+            android:layout_marginLeft="-21dp"
+            android:layout_marginTop="-16dp"
+            android:src="@drawable/ic_audio_delete" />
+    </LinearLayout>
+</LinearLayout>

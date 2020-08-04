@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="MissingDefaultResource">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_13"
+                android:layout_marginTop="@dimen/size_16"
+                android:text="效果展示"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.mti.component.extend.SignatureComponent
+                android:id="@+id/signatureView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginLeft="@dimen/size_16"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_16" />
+
+            <LinearLayout
+                android:id="@+id/layoutResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_16"
+                android:layout_marginTop="@dimen/size_10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签名结果"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/signatureBitmap"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="@dimen/size_10" />
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.mti.component.extend.floatbutton.FloatingActionsMenu xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/floatingMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_16"
+        android:layout_marginBottom="@dimen/size_16"
+        app:fab_addButtonColorNormal="@color/colorPrimary"
+        app:fab_addButtonColorPressed="#F6F7FB"
+        app:fab_addButtonPlusIconColor="@color/white"
+        app:fab_labelStyle="@style/menu_labels_style"
+        app:fab_original_icon="@drawable/fab_menu">
+
+        <com.mti.component.extend.floatbutton.FloatingActionButton
+            android:id="@+id/floatUndo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#EE7000"
+            app:fab_colorPressed="#33000000"
+            app:fab_icon="@drawable/fab_undo"
+            app:fab_size="mini"
+            app:fab_title="撤销" />
+
+        <com.mti.component.extend.floatbutton.FloatingActionButton
+            android:id="@+id/floatClean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#00D070"
+            app:fab_colorPressed="#33000000"
+            app:fab_icon="@drawable/fab_redo"
+            app:fab_size="mini"
+            app:fab_title="清空" />
+
+        <com.mti.component.extend.floatbutton.FloatingActionButton
+            android:id="@+id/floatSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#00CAAC"
+            app:fab_colorPressed="#33000000"
+            app:fab_icon="@drawable/fab_feedback"
+            app:fab_size="mini"
+            app:fab_title="保存" />
+
+
+    </com.mti.component.extend.floatbutton.FloatingActionsMenu>
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="custom" type="text/css"></style>
+    <link rel="stylesheet" href="mark.css" type="text/css">
+</head>
+<body marginheight="0"><h1>柱状图图表使用</h1>
+<h2>如何使用</h2>
+<p>由于需要配置的属性比较多，所以这里使用Builder设计模式让调用者更加便捷
+
+</p>
+<h4>1.属性与方法说明（这里只列举比较常用的，属性对应同名方法）</h4>
+<p>ColumnChartView chartView： //图表view
+
+</p>
+<p>List
+    <map
+    <float
+            , integer="">&gt; columnData：//图表数据，外层list为主列，map为主列对应的子列数据
+
+        </map
+        <float
+                ,>
+</p>
+<p>String xAxisName： //x轴的轴名称，在hasAxes=true时有效
+
+</p>
+<p>String yAxisName： //y轴的轴名称，在hasAxes=true时有效
+
+</p>
+<p>int axisLineColor： //轴线的颜色
+
+</p>
+<p>int axisTextColor：//轴字体颜色
+
+</p>
+<p>int axisTextSize： //轴字体大小，单位sp
+
+</p>
+<p>boolean stacked： //是否开启子列堆叠模式
+
+</p>
+<p>boolean hasAxes： //是否显示x，y轴线
+
+</p>
+<p>boolean hasAxesNames：//是否显示x，y轴名称
+
+</p>
+<p>boolean hasLabels：//是否显示数据label标识,与hasLabelForSelected互斥
+
+</p>
+<p>boolean hasLabelForSelected：//点击选中的时候是否显示对应的label，和hasLabels是互斥的
+
+</p>
+<p>boolean hasLines：//如果为true，则渲染器将为此轴绘制线条（网格）,开启时hasAxes必须为true
+
+</p>
+<h4>2.布局使用</h4>
+<pre><code>  &lt;lecho.lib.hellocharts.view.ColumnChartView
+        android:id="@+id/columnChartView"
+        style="@style/match_width"
+        android:layout_height="300dp"
+        android:visibility="visible" /&gt;</code></pre>
+<h4>3.代码调用</h4>
+<h5>3.1 饼状图</h5>
+<pre><code> /**
+     * 柱状图
+     */
+    private fun render() {
+        var data = mutableListOf&lt;Map&lt;Float, Int&gt;&gt;()
+        data.add(mapOf(50F to ChartUtils.pickColor()))
+        data.add(mapOf(23F to ChartUtils.pickColor()))
+        data.add(mapOf(10F to ChartUtils.pickColor()))
+        data.add(mapOf(78F to ChartUtils.pickColor()))
+        data.add(mapOf(45F to ChartUtils.pickColor()))
+        data.add(mapOf(39F to ChartUtils.pickColor()))
+        data.add(mapOf(21F to ChartUtils.pickColor()))
+        data.add(mapOf(66F to ChartUtils.pickColor()))
+        data.add(mapOf(38F to ChartUtils.pickColor()))
+        data.add(mapOf(29F to ChartUtils.pickColor()))
+
+        ColumnChartRender.Builder()
+                .chartView(columnChartView)
+                .columnData(data)
+                .hasAxes(true)
+                .hasLines(true)
+                .hasLabels(true)
+                .hasLabelForSelected(true)
+                .build()
+                .render()
+    }</code></pre>
+<h4>4.点击事件</h4>
+<pre><code>  columnChartView.onValueTouchListener = object : PieChartOnValueSelectListener {
+            override fun onValueSelected(arcIndex: Int, value: SliceValue?) {
+
+            }
+
+            override fun onValueDeselected() {
+            }
+        }</code></pre>
+</body>
+</html>

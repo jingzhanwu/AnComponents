@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ring="http://schemas.android.com/apk/res-auto"
+    style="@style/match_parent"
+    android:background="#EEF1F3"
+    android:fillViewport="true">
+
+    <LinearLayout
+        style="@style/match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/size_10"
+            style="@style/match_width"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                style="@style/match_width"
+                android:layout_height="@dimen/size_40"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/size_16">
+
+                <TextView
+                    style="@style/match_width"
+                    android:layout_weight="1"
+                    android:text="勤务任务"
+                    android:textColor="#333333" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="@dimen/size_24"
+                    android:padding="@dimen/size_6"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#DDDDDD" />
+
+            <LinearLayout
+                style="@style/match_width"
+                android:layout_marginTop="@dimen/size_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/size_16">
+
+
+                <TextView
+                    style="@style/wrap_content"
+                    android:text="5月"
+                    android:textColor="#094E7B"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/wrap_content"
+                    android:text="常态"
+                    android:textColor="#0990EC"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/wrap_content"
+                    android:text="勤务任务统计"
+                    android:textColor="#094E7B"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_15"
+                    android:layout_height="@dimen/size_15"
+                    android:layout_marginStart="@dimen/size_8"
+                    android:src="@drawable/ic_tips" />
+            </LinearLayout>
+
+            <lecho.lib.hellocharts.view.ColumnChartView
+                android:id="@+id/normalScheduleChartView"
+                style="@style/match_width"
+                android:layout_height="300dp"
+                android:layout_marginTop="@dimen/size_10"
+                android:paddingHorizontal="@dimen/size_16"
+                android:visibility="visible" />
+
+            <LinearLayout
+                style="@style/match_width"
+                android:layout_marginTop="@dimen/size_20"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/size_16">
+
+                <TextView
+                    style="@style/wrap_content"
+                    android:text="5月"
+                    android:textColor="#094E7B"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/wrap_content"
+                    android:text="专项"
+                    android:textColor="#00AD5F"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/wrap_content"
+                    android:text="勤务任务统计"
+                    android:textColor="#094E7B"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_15"
+                    android:layout_height="@dimen/size_15"
+                    android:layout_marginStart="@dimen/size_8"
+                    android:src="@drawable/ic_tips" />
+            </LinearLayout>
+
+            <lecho.lib.hellocharts.view.ComboLineColumnChartView
+                android:id="@+id/specialScheduleChartView"
+                style="@style/match_width"
+                android:layout_height="300dp"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_marginBottom="@dimen/size_10"
+                android:paddingHorizontal="@dimen/size_16"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/match_width"
+            android:layout_marginVertical="@dimen/size_10"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/size_10">
+
+            <LinearLayout
+                style="@style/match_width"
+                android:layout_height="@dimen/size_40"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/match_width"
+                    android:layout_weight="1"
+                    android:text="考勤"
+                    android:textColor="#333333" />
+
+                <ImageView
+                    android:id="@+id/ivSeeMoreSchedule"
+                    android:layout_width="@dimen/size_36"
+                    android:layout_height="@dimen/size_36"
+                    android:padding="@dimen/size_10"
+                    android:src="@mipmap/ic_arrow_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#DDDDDD" />
+
+            <LinearLayout
+                style="@style/match_width"
+                android:paddingVertical="@dimen/size_10">
+
+                <TextView
+                    style="@style/wrap_content"
+                    android:text="5月考勤统计"
+                    android:textColor="#094E7B"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/match_width"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="2020.05.01 - 2020.05.31"
+                    android:textColor="#999999" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="@dimen/size_24"
+                    android:padding="@dimen/size_3"
+                    android:src="@drawable/icon_arrow_down_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/match_width"
+                android:layout_marginBottom="@dimen/size_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/match_width"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        style="@style/wrap_content">
+                        <com.mti.component.common.SimpleRingProgressComponent
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/size_100"
+                            android:padding="@dimen/size_8"
+                            ring:backColor="#eeeeee"
+                            ring:backWidth="@dimen/size_4"
+                            ring:progressRate="80"
+                            ring:progressColor="#0990EC"
+                            ring:progressWidth="@dimen/size_5" />
+
+
+                        <TextView
+                            style="@style/wrap_content"
+                            android:text="12"
+                            android:layout_gravity="center"
+                            android:textColor="#0990EC"
+                            android:textSize="30sp" />
+                    </FrameLayout>
+
+
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:text="出勤天数"
+                        android:textColor="#333333" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/match_width"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        style="@style/wrap_content">
+                        <com.mti.component.common.SimpleRingProgressComponent
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/size_100"
+                            android:padding="@dimen/size_8"
+                            ring:backColor="#eeeeee"
+                            ring:backWidth="@dimen/size_4"
+                            ring:progressRate="13"
+                            ring:progressColor="#EB4847"
+                            ring:progressWidth="@dimen/size_5" />
+
+
+                        <TextView
+                            style="@style/wrap_content"
+                            android:text="2"
+                            android:layout_gravity="center"
+                            android:textColor="#EB4847"
+                            android:textSize="30sp" />
+                    </FrameLayout>
+
+
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:text="迟到次数"
+                        android:textColor="#333333" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/match_width"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        style="@style/wrap_content">
+                        <com.mti.component.common.SimpleRingProgressComponent
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/size_100"
+                            android:padding="@dimen/size_8"
+                            ring:backColor="#eeeeee"
+                            ring:backWidth="@dimen/size_4"
+                            ring:progressRate="7"
+                            ring:progressColor="#FF7433"
+                            ring:progressWidth="@dimen/size_5" />
+
+
+                        <TextView
+                            style="@style/wrap_content"
+                            android:text="1"
+                            android:layout_gravity="center"
+                            android:textColor="#FF7433"
+                            android:textSize="30sp" />
+                    </FrameLayout>
+
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:text="早退次数"
+                        android:textColor="#333333" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/match_width"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        style="@style/wrap_content">
+                        <com.mti.component.common.SimpleRingProgressComponent
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/size_100"
+                            android:padding="@dimen/size_8"
+                            ring:backColor="#eeeeee"
+                            ring:backWidth="@dimen/size_4"
+                            ring:progressRate="0"
+                            ring:progressColor="#999999"
+                            ring:progressWidth="@dimen/size_5" />
+
+
+                        <TextView
+                            style="@style/wrap_content"
+                            android:text="0"
+                            android:layout_gravity="center"
+                            android:textColor="#999999"
+                            android:textSize="30sp" />
+                    </FrameLayout>
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:text="缺卡次数"
+                        android:textColor="#999999" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

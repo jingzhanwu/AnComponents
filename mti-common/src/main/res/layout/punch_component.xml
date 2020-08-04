@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/match_width"
+    android:layout_marginLeft="@dimen/size_16"
+    android:layout_marginRight="@dimen/size_16"
+    android:layout_marginTop="@dimen/size_14"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/desTextView"
+        style="@style/wrap_content"
+        android:text="上班时间09：00"
+        android:textSize="@dimen/text_size_13"
+        android:textColor="@color/gray_font_dark" />
+
+    <TextView
+        android:id="@+id/punchTimeTextView"
+        style="@style/wrap_content"
+        android:layout_marginBottom="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_10"
+        android:text="打卡时间"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="bold" />
+
+
+
+    <LinearLayout
+        android:id="@+id/locLayout"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        style="@style/match_width">
+
+        <ImageView
+            android:src="@drawable/ic_loc"
+            android:layout_width="@dimen/size_14"
+            android:layout_height="@dimen/size_18"/>
+        <TextView
+            android:id="@+id/locationTextView"
+            style="@style/wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_11"
+            android:text="华府新桃园"
+            android:textColor="@color/gray_font_dark" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/punchClockLayout"
+        android:visibility="gone"
+        android:layout_width="@dimen/size_120"
+        android:layout_height="@dimen/size_120"
+        android:layout_margin="@dimen/size_10"
+        android:layout_gravity="center_horizontal">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/loadingView"
+            android:layout_width="@dimen/size_120"
+            android:layout_height="@dimen/size_120"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/size_10"
+            app:indicatorColor="#FA3F7F"
+            app:indicatorName="BallScaleMultipleIndicator" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="上班打卡"
+            android:layout_marginTop="-10dp"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            style="@style/wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size_14"
+            android:gravity="center"
+            android:text="08:23"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+
+</LinearLayout>

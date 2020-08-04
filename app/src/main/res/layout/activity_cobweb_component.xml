@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginTop="@dimen/size_16"
+        android:text="展示效果"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginRight="@dimen/size_16"
+        android:text="蜘蛛网背景组件，主要适用于展现科技感背景"
+        android:textColor="@color/black_hint"
+        android:textSize="@dimen/text_size_normal" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        style="@style/match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/size_20">
+
+            <com.mti.component.common.CobwebComponent
+                android:id="@+id/cobWebComponent"
+                android:layout_height="@dimen/size_300"
+                style="@style/match_width" />
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

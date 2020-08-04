@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ring="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--        警情等级-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/white_4radius_shape"
+            android:padding="@dimen/size_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="80dp"
+                android:text="总警情数 3814"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="80dp"
+                android:text="重大警情数 21"
+                android:textColor="#E35D67"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <include layout="@layout/alarm_level_layout" />
+
+        </RelativeLayout>
+
+
+        <!--        警情等级详情统计-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_4radius_shape"
+            android:orientation="vertical"
+            android:padding="@dimen/size_10">
+
+            <TextView
+                android:id="@+id/tvAlarmLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_20"
+                android:text="一级警情"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+            <lecho.lib.hellocharts.view.PieChartView
+                android:id="@+id/alarmLevelDetailChartView"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible" />
+
+            <include layout="@layout/chart_label_layout" />
+
+        </LinearLayout>
+
+        <!--        重点人员统计-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_4radius_shape"
+            android:orientation="vertical"
+            android:padding="@dimen/size_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_12"
+                android:text="重点人员统计"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/match_width"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout style="@style/wrap_content">
+
+                        <com.mti.component.common.SimpleRingProgressComponent
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/size_100"
+                            ring:backColor="#cccccc"
+                            ring:backWidth="@dimen/size_5"
+                            ring:progressColor="#FF7979"
+                            ring:progressRate="79"
+                            ring:progressWidth="@dimen/size_7" />
+
+
+                        <TextView
+                            style="@style/wrap_content"
+                            android:layout_gravity="center"
+                            android:text="一级"
+                            android:textColor="#FF7979"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:text="在控：19\n失控：8"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/match_width"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout style="@style/wrap_content">
+
+                        <com.mti.component.common.SimpleRingProgressComponent
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/size_100"
+                            ring:backColor="#cccccc"
+                            ring:backWidth="@dimen/size_5"
+                            ring:progressColor="#FFBA37"
+                            ring:progressRate="66"
+                            ring:progressWidth="@dimen/size_7" />
+
+
+                        <TextView
+                            style="@style/wrap_content"
+                            android:layout_gravity="center"
+                            android:text="二级"
+                            android:textColor="#FFBA37"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:text="在控：31\n失控：5"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/match_width"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout style="@style/wrap_content">
+
+                        <com.mti.component.common.SimpleRingProgressComponent
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/size_100"
+                            ring:backColor="#cccccc"
+                            ring:backWidth="@dimen/size_5"
+                            ring:progressColor="#00CF79"
+                            ring:progressRate="49"
+                            ring:progressWidth="@dimen/size_7" />
+
+
+                        <TextView
+                            style="@style/wrap_content"
+                            android:layout_gravity="center"
+                            android:text="三级"
+                            android:textColor="#00CF79"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+
+                    <TextView
+                        style="@style/wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:text="在控：20\n失控：0"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/size_10"
+    app:cardElevation="@dimen/size_10"
+    app:cardUseCompatPadding="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivCover"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_calendar" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_marginLeft="@dimen/size_8"
+            android:layout_marginBottom="@dimen/size_4"
+            android:text="汉子皇帝啊是哦啊师傅 "
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_2"
+            android:layout_marginLeft="@dimen/size_8"
+            android:layout_marginRight="@dimen/size_8"
+            android:layout_marginBottom="@dimen/size_8"
+            android:text="大大叔大叔是爱仕达啊爱上大大大的阿达爱仕达啊啊打盹阿达阿达阿达啊啊大阿达阿达啊啊啊爱上的"
+            android:textColor="@color/black_hint"
+            android:textSize="@dimen/text_size_small" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

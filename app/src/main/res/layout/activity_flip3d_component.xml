@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginTop="@dimen/size_16"
+        android:text="展示效果"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginRight="@dimen/size_16"
+        android:text="3d翻转组件，让视图具有3d翻转效果"
+        android:textColor="@color/black_hint"
+        android:textSize="@dimen/text_size_normal" />
+
+
+<!--    <android.support.v4.widget.NestedScrollView-->
+<!--        style="@style/match_parent"-->
+<!--        android:fillViewport="true">-->
+
+        <LinearLayout
+            style="@style/match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/size_20">
+
+            <com.mti.component.common.Flip3DComponent
+                android:layout_gravity="center_horizontal"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/picture_carousel" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/picture_cobweb" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/picture_punch" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/picture_video" />
+            </com.mti.component.common.Flip3DComponent>
+
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+<!--    </android.support.v4.widget.NestedScrollView>-->
+
+</LinearLayout>

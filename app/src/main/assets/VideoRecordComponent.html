@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="custom" type="text/css"></style>
+    <link rel="stylesheet" href="mark.css" type="text/css">
+</head>
+<body marginheight="0">
+<h2>如何使用</h2>
+<h4>1.功能特点</h4>
+<ul>
+    <li>一建启动录制</li>
+    <li>自定义录制时长</li>
+    <li>视频预览</li>
+</ul>
+<h4>2.代码调用</h4>
+<h5>第一步，启动视频录制，启动参数为最大录制时长，单位为秒</h5>
+<pre><code>    private fun startRecordPage() {
+        var intent = Intent(this, VideoRecordComponent::class.java)
+        //设置最大录制时长，单位为秒，这里设置15秒
+        intent.putExtra("maxDuration", 15)
+        //启动录制
+        startActivityForResult(intent, 100)
+    }</code></pre>
+<h5>第二步，接收处理录制结果</h5>
+<pre><code>    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 10) {
+            //结果类型,1=图片，2=视频
+            var type = data?.getIntExtra("type", VideoRecordComponent.TYPE_VIDEO);
+            //录制完成视频的本地存储路径
+            var videoPath = data?.getStringExtra("path");
+            //视频录制时为缩略图地址，图片时为图片本地路径
+            var imagePath = data?.getStringExtra("imagePath");
+
+            print("视频地址：$videoPath,\n图片地址：$imagePath,\n类型：$type")
+        }
+    }</code></pre>
+</body>
+</html>

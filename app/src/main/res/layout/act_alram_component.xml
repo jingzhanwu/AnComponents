@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/size_20"
+        tools:ignore="MissingDefaultResource">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="效果展示"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_20"
+            android:text="InputComponent组件，适用于信息录入提交类的业务场景，以新建警情为例"
+            android:textColor="@color/black_hint"
+            android:textSize="@dimen/text_size_normal" />
+
+
+        <com.mti.component.common.InputComponent
+            android:id="@+id/inputAlarmPerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_5"
+            app:inputHintText="请输入姓名"
+            app:inputTextColor="@color/colorPrimary"
+            app:labelText="报警人:"
+            app:openEdit="true"
+            app:rightImage="@drawable/ic_saoyisao"
+            app:showRightImage="true" />
+
+        <com.mti.component.common.InputComponent
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4"
+            app:inputHintText="请输入电话"
+            app:inputTextColor="@color/colorPrimary"
+            app:labelText="联系电话:"
+            app:openEdit="true"
+            app:showMarker="true" />
+
+        <com.mti.component.common.InputComponent
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4"
+            app:inputHintText="请输入联系地址"
+            app:inputTextColor="@color/colorPrimary"
+            app:labelText="联系地址:"
+            app:openEdit="true"
+            app:showMarker="true" />
+
+        <com.mti.component.common.InputComponent
+            android:id="@+id/inputAlarmMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4"
+            app:defaultText="来人(来电)报警"
+            app:inputHintText="选择报警方式"
+            app:inputTextColor="@color/colorPrimary"
+            app:labelText="报警方式:"
+            app:openEdit="false"
+            app:rightImage="@mipmap/ic_arrow_right"
+            app:showMarker="true"
+            app:showRightImage="true" />
+
+        <com.mti.component.common.InputComponent
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4"
+            app:inputHintText="请输入事发地址"
+            app:inputTextColor="@color/colorPrimary"
+            app:labelText="事发地址:"
+            app:openEdit="true"
+            app:showMarker="true" />
+
+        <com.mti.component.common.InputComponent
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4"
+            app:defaultText="入室盗窃"
+            app:inputHintText="请选择案由"
+            app:inputTextColor="@color/colorPrimary"
+            app:labelText="案由:"
+            app:openEdit="false"
+            app:rightImage="@mipmap/ic_arrow_right"
+            app:showMarker="true"
+            app:showRightImage="true" />
+
+        <com.mti.component.common.InputComponent
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4"
+            app:defaultText="二级警情"
+            app:inputHintText="请选择级别"
+            app:inputTextColor="@color/colorPrimary"
+            app:labelText="警情级别:"
+            app:openEdit="false"
+            app:rightImage="@mipmap/ic_arrow_right"
+            app:showMarker="true"
+            app:showRightImage="true" />
+
+        <com.mti.component.common.InputComponent
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4"
+            app:inputHintText="输入报警内容"
+            app:inputMinHeight="100dp"
+            app:inputTextColor="@color/colorPrimary"
+            app:labelText="报警内容:"
+            app:openEdit="true"
+            app:showMarker="true" />
+
+
+        <TextView
+            android:id="@+id/tvRichText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="custom" type="text/css"></style>
+    <link rel="stylesheet" href="mark.css" type="text/css">
+</head>
+<body marginheight="0"><h2>如何使用</h2>
+<p>这里提供标签组件。
+</p>
+<h3>标签组件</h3>
+<h4>1.布局使用</h4>
+<pre><code>&lt;com.mti.component.common.tag.FlowComponent
+                android:id="@+id/interestFlowComponent"
+                style="@style/match_width" /&gt;</code></pre>
+<h4>2.构造加载数据</h4>
+<pre><code>    override fun initViews(savedInstanceState: Bundle?) {
+        setToolbarTitle("FlowComponent")
+        showToolbarBackView()
+        val interests = listOf&lt;String&gt;("唱歌", "看书", "划船", "饲养宠物",
+                "保龄球", "登山", "摄影", "下各种棋", "吃美食",
+                "书法", "看新闻", "做饭")
+
+        val interestData = interests.map { TagEntry("$it") }.toList()
+
+        interestFlowComponent.isShowingDelete=false
+        interestFlowComponent.initAddListener(interestData, object :OnTagClickListener{
+            override fun onItemClick(position: Int) {
+                toast("点击了${interestData[position].tagName}")
+            }
+
+            override fun onItemDelete(position: Int) {
+
+            }
+        })
+
+    }</code></pre>
+</body>
+</html>

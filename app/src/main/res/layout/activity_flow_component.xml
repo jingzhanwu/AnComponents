@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginTop="@dimen/size_16"
+        android:text="展示效果"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_26"
+        android:layout_marginRight="@dimen/size_16"
+        android:text="标签组件，主要适用于流式布局"
+        android:textColor="@color/black_hint"
+        android:textSize="@dimen/text_size_normal" />
+
+    <android.support.v4.widget.NestedScrollView
+        style="@style/match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/size_20">
+
+            <TextView
+                android:text="兴趣爱好"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginBottom="@dimen/size_10"
+                style="@style/match_width"/>
+            <com.mti.component.common.tag.FlowComponent
+                android:id="@+id/interestFlowComponent"
+                style="@style/match_width" />
+
+            <View
+                android:layout_marginTop="@dimen/size_20"
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_height="1px"/>
+            <TextView
+                android:layout_marginTop="@dimen/size_10"
+                android:text="运动类"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginBottom="@dimen/size_10"
+                style="@style/match_width"/>
+            <com.mti.component.common.tag.FlowComponent
+                android:id="@+id/plantFlowComponent"
+                style="@style/match_width" />
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

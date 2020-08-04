@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/match_width">
+
+    <com.mti.component.common.punch.PunchComponent
+        android:id="@+id/goToWorkClockLayout"
+        style="@style/match_width" />
+
+    <com.mti.component.common.punch.PunchComponent
+        android:layout_marginTop="@dimen/size_20"
+        android:id="@+id/goOffWorkClockLayout"
+        style="@style/match_width" />
+</LinearLayout>

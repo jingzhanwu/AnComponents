@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    style="@style/match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginTop="@dimen/size_16"
+        android:text="展示效果"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_16"
+        android:text="轮播组件，主要适用于广告轮播"
+        android:textColor="@color/black_hint"
+        android:textSize="@dimen/text_size_normal" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        style="@style/match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/size_20">
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                banner:image_scale_type="fit_xy"
+                banner:banner_default_image="@drawable/bg_light_blue_rect"
+                android:layout_margin="@dimen/size_12"
+                android:background="@drawable/bg_light_blue_rect"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130" />
+
+            <com.youth.banner.Banner
+                android:layout_marginTop="@dimen/size_20"
+                android:id="@+id/banner1"
+                banner:image_scale_type="fit_xy"
+                banner:banner_default_image="@drawable/bg_light_blue_rect"
+                android:layout_margin="@dimen/size_12"
+                android:background="@drawable/bg_light_blue_rect"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130" />
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

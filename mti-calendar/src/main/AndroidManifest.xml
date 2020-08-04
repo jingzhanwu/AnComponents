@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mti.calendar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application>
+        <activity android:name=".CalenderMainActivity" />
+        <activity android:name=".meizu.MeiZuActivityCalender" />
+        <activity android:name=".multi.MultiActivityCalender" />
+        <activity android:name=".index.IndexActivityCalender" />
+        <activity android:name=".simple.SimpleActivityCalender" />
+        <activity android:name=".range.RangeActivityCalender" />
+        <activity android:name=".colorful.ColorfulActivityCalender" />
+        <activity android:name=".solay.SolarActivityCalender" />
+        <activity android:name=".single.SingleActivityCalender" />
+        <activity android:name=".progress.ProgressActivityCalender" />
+        <activity android:name=".custom.CustomActivityCalender" />
+        <activity android:name=".pager.ViewPagerActivityCalender" />
+        <activity android:name=".full.FullActivityCalender" />
+        <activity android:name=".TestActivityCalender" />
+        <activity android:name=".CalendarActivityCalender" />
+    </application>
+
+</manifest>

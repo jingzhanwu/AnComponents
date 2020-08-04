@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/size_20">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="14dp"
+                android:layout_height="8dp"
+                android:background="#33ff99" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="电信咋骗"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/size_20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="14dp"
+                android:layout_height="8dp"
+                android:background="#0081F9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="盗窃车内物品"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/label3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="14dp"
+                android:layout_height="8dp"
+                android:background="#FF0033" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="盗窃电动车"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/label4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label3"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/size_20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="14dp"
+                android:layout_height="8dp"
+                android:background="#ff6633" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_4"
+                android:drawablePadding="0dp"
+                android:includeFontPadding="false"
+                android:text="入室盗窃"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

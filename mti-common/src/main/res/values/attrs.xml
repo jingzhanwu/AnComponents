@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImageNice9Component">
+        <attr name="nice9_canDrag" format="boolean" />
+        <attr name="nice9_itemMargin" format="dimension" />
+        <attr name="nice9_tipText" format="reference|string" />
+        <attr name="nice9_tipColor" format="reference|color" />
+        <attr name="nice9_tipBgColor" format="reference|color" />
+        <attr name="nice9_tipBgDrawable" format="reference" />
+        <attr name="nice9_delDrawable" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CobwebComponent">
+        <attr name="cwb_point_num" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleRingProgressComponent">
+        <!--背景圆环宽度-->
+        <attr name="backWidth" format="dimension" />
+        <!--进度圆环宽度-->
+        <attr name="progressWidth" format="dimension" />
+        <!--背景圆环颜色-->
+        <attr name="backColor" format="color" />
+        <!--进度圆环颜色-->
+        <attr name="progressColor" format="color" />
+        <!--进度圆环开始颜色-->
+        <attr name="progressStartColor" format="color" />
+        <!--进度圆环结束颜色-->
+        <attr name="progressFirstColor" format="color" />
+        <!--圆环进度-->
+        <attr name="progressRate" format="integer" />
+    </declare-styleable>
+
+    <!--    自定义水平进度条-->
+    <declare-styleable name="HorizontalProgressComponent">
+        <attr name="zpb_padding" format="dimension" />
+        <attr name="zpb_bg_color" format="color|reference" />
+        <attr name="zpb_pb_color" format="color|reference" />
+        <attr name="zpb_second_pb_color" format="color|reference" />
+        <attr name="zpb_max" format="integer" />
+        <attr name="zpb_progress" format="integer" />
+        <attr name="zpb_show_zero_point" format="boolean" />
+        <attr name="zpb_show_second_progress" format="boolean" />
+        <attr name="zpb_second_progress" format="integer" />
+        <attr name="zpb_show_second_point_shape" format="enum">
+            <enum name="point" value="0" />
+            <enum name="line" value="1" />
+        </attr>
+        <attr name="zpb_open_gradient" format="boolean" />
+        <attr name="zpb_gradient_from" format="color|reference" />
+        <attr name="zpb_gradient_to" format="color|reference" />
+        <attr name="zpb_open_second_gradient" format="boolean" />
+        <attr name="zpb_second_gradient_from" format="color|reference" />
+        <attr name="zpb_second_gradient_to" format="color|reference" />
+        <attr name="zpb_show_mode" format="enum">
+            <enum name="round" value="0" />
+            <enum name="rect" value="1" />
+            <enum name="round_rect" value="2" />
+        </attr>
+        <attr name="zpb_round_rect_radius" format="dimension|reference" />
+        <attr name="zpb_draw_border" format="boolean" />
+        <attr name="zpb_border_width" format="dimension|reference" />
+        <attr name="zpb_border_color" format="color|reference" />
+
+    </declare-styleable>
+
+    <!--自定义inputComponent组件属性-->
+    <declare-styleable name="InputComponent">
+        <attr name="labelText" format="string|reference" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="labelTextColor" format="color|reference" />
+
+        <attr name="defaultText" format="string|reference" />
+        <attr name="inputTextSize" format="dimension" />
+        <attr name="inputTextColor" format="color|reference" />
+        <attr name="inputHintText" format="string|reference" />
+
+        <attr name="showRightImage" format="boolean" />
+        <attr name="showLeftImage" format="boolean" />
+        <attr name="rightImage" format="reference" />
+        <attr name="leftImage" format="reference" />
+        <attr name="inputMinHeight" format="dimension" />
+
+        <attr name="inputBackground" format="reference" />
+        <attr name="openEdit" format="boolean" />
+        <attr name="showMarker" format="boolean" />
+        <attr name="showLabel" format="boolean" />
+        <attr name="disableInput" format="boolean" />
+    </declare-styleable>
+
+    <!--TimeLineComponent时间轴组件属性-->
+    <declare-styleable name="TimeLineComponent">
+        <attr name="marker" format="color|reference" />
+        <attr name="markerSize" format="dimension" />
+        <attr name="markerPaddingLeft" format="dimension" />
+        <attr name="markerPaddingTop" format="dimension" />
+        <attr name="markerPaddingRight" format="dimension" />
+        <attr name="markerPaddingBottom" format="dimension" />
+        <attr name="markerInCenter" format="boolean" />
+        <attr name="startLineColor" format="color" />
+        <attr name="endLineColor" format="color" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="dash" value="1" />
+        </attr>
+        <attr name="lineStyleDashGap" format="dimension" />
+        <attr name="lineStyleDashLength" format="dimension" />
+        <attr name="lineOrientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="linePadding" format="dimension" />
+    </declare-styleable>
+</resources>

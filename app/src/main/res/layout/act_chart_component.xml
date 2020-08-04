@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@color/colorPrimary"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/black_hint" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <com.mti.component.extend.floatbutton.FloatingActionsMenu xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/floatingMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_16"
+        android:layout_marginBottom="@dimen/size_16"
+        app:fab_addButtonColorNormal="@color/colorPrimary"
+        app:fab_addButtonColorPressed="#F6F7FB"
+        app:fab_addButtonPlusIconColor="@color/white"
+        app:fab_labelStyle="@style/menu_labels_style"
+        app:fab_original_icon="@drawable/fab_menu">
+
+        <com.mti.component.extend.floatbutton.FloatingActionButton
+            android:id="@+id/floatLineDoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#EE7000"
+            app:fab_colorPressed="#33000000"
+            app:fab_icon="@drawable/fab_undo"
+            app:fab_size="mini"
+            app:fab_title="折线图" />
+
+        <com.mti.component.extend.floatbutton.FloatingActionButton
+            android:id="@+id/floatPieDoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#00D070"
+            app:fab_colorPressed="#33000000"
+            app:fab_icon="@drawable/fab_redo"
+            app:fab_size="mini"
+            app:fab_title="饼图" />
+
+        <com.mti.component.extend.floatbutton.FloatingActionButton
+            android:id="@+id/floatColumnDoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#00CAAC"
+            app:fab_colorPressed="#33000000"
+            app:fab_icon="@drawable/fab_feedback"
+            app:fab_size="mini"
+            app:fab_title="柱状图" />
+
+    </com.mti.component.extend.floatbutton.FloatingActionsMenu>
+</RelativeLayout>

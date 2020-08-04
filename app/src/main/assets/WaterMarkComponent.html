@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="custom" type="text/css"></style>
+    <link rel="stylesheet" href="mark.css" type="text/css">
+</head>
+<body marginheight="0">
+<h2>如何使用</h2>
+<h4>1.属性方法说明</h4>
+<ul>
+    <li>showWaterMarkView(activity: Activity, content: String)
+        只提供一个打水印的方法，参数content 为水印文字
+    </li>
+</ul>
+<h4>2.代码使用</h4>
+<pre><code> fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.act_waterkark)
+         //开始打水印，一定要在setContentView方法调用之后调用
+        WaterMarkComponent.showWaterMarkView(this, "道枢MTI")
+    }</code></pre>
+</body>
+</html>

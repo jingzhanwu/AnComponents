@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/size_10"
+    android:paddingTop="@dimen/size_10"
+    android:paddingBottom="@dimen/size_10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvComponentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文字水印"
+            android:textColor="@color/black_content"
+            android:textSize="14sp" />
+
+        <com.mti.component.common.HorizontalProgressComponent
+            android:id="@+id/componentProgress"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_below="@+id/tvComponentName"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_toLeftOf="@+id/tvComponentProgressValue"
+            app:zpb_bg_color="#F3F3F3"
+            app:zpb_max="2000"
+            app:zpb_pb_color="#E35D67"
+            app:zpb_progress="1451" />
+
+        <TextView
+            android:id="@+id/tvComponentProgressValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvComponentName"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/size_10"
+            android:text="50%"
+            android:textColor="#E35D67"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:ignore="MissingDefaultResource">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_13"
+            android:layout_marginTop="@dimen/size_16"
+            android:text="效果展示"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_13"
+            android:layout_marginRight="@dimen/size_16"
+            android:text="支持自由拖拽，拥有9中显示风格，加号增加图片，减号减少图片。"
+            android:textColor="@color/black_hint"
+            android:textSize="@dimen/text_size_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size_16"
+            android:paddingTop="@dimen/size_20">
+
+            <Button
+                android:id="@+id/btnReduce"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/size_32"
+                android:layout_marginRight="@dimen/size_20"
+                android:background="@drawable/button_mini_bg_shape"
+                android:text="减少"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/size_32"
+                android:background="@drawable/button_mini_bg_shape"
+                android:text="增加"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <com.mti.component.common.nice9.ImageNice9Component xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ivNice9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_16"
+            android:layout_marginRight="@dimen/size_16"
+            android:orientation="vertical"
+            app:nice9_canDrag="true"
+            app:nice9_itemMargin="@dimen/size_1"
+            app:nice9_tipColor="@color/black_hint"
+            app:nice9_tipText="长按拖拽调整位置" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_16"
+            android:layout_marginTop="@dimen/size_10"
+            android:text="普通模式"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold" />
+
+        <com.mti.component.common.image.ImageAddComponent
+            android:id="@+id/imageAddComponent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_16"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_16" />
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

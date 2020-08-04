@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_width"
+    android:layout_marginHorizontal="@dimen/size_10"
+    android:orientation="horizontal">
+
+    <com.mti.component.common.TimeLineComponent
+        android:id="@+id/timeline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:marker="@drawable/ic_mark_time"
+        app:markerInCenter="false"
+        app:endLineColor="#eeeeee"
+        app:lineOrientation="vertical"
+        app:lineStyle="dash"
+        app:lineWidth="1dp"
+        app:markerSize="26dp"
+        app:startLineColor="#eeeeee" />
+
+    <LinearLayout
+        style="@style/match_width"
+        android:layout_marginStart="@dimen/size_15"
+        android:layout_marginEnd="@dimen/size_5"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/match_width"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTimePeriod"
+                style="@style/wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_small"
+                tools:text="09:00-10:00 AM" />
+
+            <TextView
+                android:id="@+id/tvPositionType"
+                style="@style/wrap_content"
+                android:visibility="gone"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_marginStart="@dimen/size_14"
+                android:textColor="@color/black_content"
+                tools:text="早高峰" />
+
+            <TextView
+                android:id="@+id/tvServiceType"
+                style="@style/match_width"
+                android:layout_marginStart="@dimen/size_14"
+                android:textSize="@dimen/text_size_medium"
+                android:gravity="center_vertical|left"
+                android:textColor="@color/black_content"
+                tools:text="街面巡逻" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/wrap_content"
+            android:layout_marginTop="@dimen/size_6"
+            android:textColor="@color/black_content"
+            android:textSize="@dimen/text_size_large"
+            tools:text="街面巡逻" />
+
+        <LinearLayout
+            style="@style/match_width"
+            android:layout_marginTop="@dimen/size_6"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/size_14"
+                android:layout_height="@dimen/size_16"
+                android:src="@drawable/ic_loc" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/match_width"
+                android:layout_marginStart="@dimen/size_6"
+                android:text="七宝农贸市场" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/match_width"
+            android:layout_marginTop="@dimen/size_8">
+
+            <TextView
+                style="@style/wrap_content"
+                android:text="值班领导："
+                android:textColor="@color/black_content" />
+
+            <TextView
+                android:id="@+id/tvLeader"
+                style="@style/wrap_content"
+                android:text="宋江" />
+
+            <TextView
+
+                style="@style/wrap_content"
+                android:layout_marginStart="@dimen/size_20"
+                android:text="成员："
+                android:textColor="@color/black_content" />
+
+            <TextView
+                android:id="@+id/tvMember"
+                style="@style/wrap_content"
+                android:text="武松、吴用、李逵、鲁智深" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/match_width"
+            android:layout_marginTop="@dimen/size_8">
+
+            <TextView
+                style="@style/wrap_content"
+                android:text="岗位要求："
+                android:textColor="@color/black_content" />
+
+            <TextView
+                android:id="@+id/tvRequirement"
+                style="@style/wrap_content"
+                android:text="处警兼必到点签到（宝安公路加油站、嘉新公路加油站）。
+                            " />
+</LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

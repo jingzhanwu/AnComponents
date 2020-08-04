@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <LinearLayout
+        android:padding="@dimen/size_10"
+        android:orientation="horizontal"
+        style="@style/match_width">
+        <TextView
+            android:id="@+id/tvAvatar"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:layout_marginStart="@dimen/size_5"
+            android:background="@drawable/bg_avatar"
+            android:gravity="center"
+            android:text="明阳"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium" />
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/size_8"
+            android:orientation="vertical"
+            style="@style/match_width">
+            <TextView
+                android:textSize="@dimen/text_size_medium"
+                android:text="赵明阳"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                style="@style/wrap_content"/>
+            <TextView
+                android:layout_marginTop="@dimen/size_4"
+                android:textSize="@dimen/text_size_normal"
+                android:text="西安市莲湖分局"
+                android:textColor="#094E7B"
+                style="@style/wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            style="@style/wrap_content">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2020.06.17"
+                android:textColor="#094E7B"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_blue_down_arrow"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_18"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <FrameLayout style="@style/match_parent">
+
+
+        <android.support.v4.widget.NestedScrollView
+            style="@style/match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                style="@style/match_parent"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/size_20">
+
+                <LinearLayout
+                    android:layout_marginStart="@dimen/size_12"
+                    android:orientation="vertical"
+                    style="@style/wrap_content">
+
+                </LinearLayout>
+                <com.mti.component.common.punch.WorkPunchComponent
+                    android:id="@+id/workPunchLayout"
+                    style="@style/match_width" />
+
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <android.support.design.widget.FloatingActionButton
+            style="@style/wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:onClick="reset"
+            android:src="@mipmap/ic_reset"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:rippleColor="#D81B60"
+            app:pressedTranslationZ="12dp" />
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            style="@style/wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="100dp"
+            android:clickable="true"
+            android:onClick="seeMore"
+            android:src="@drawable/ic_statistics_schedule"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:rippleColor="#D81B60"
+            app:pressedTranslationZ="12dp" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="custom" type="text/css"></style>
+    <link rel="stylesheet" href="mark.css" type="text/css">
+</head>
+<body marginheight="0"><h2><font style="vertical-align: inherit;"><font
+        style="vertical-align: inherit;">如何使用</font></font></h2>
+<h3><font style="vertical-align: inherit;"><font
+        style="vertical-align: inherit;">音频录制与播放组件</font></font></h3>
+<h4><font style="vertical-align: inherit;"><font
+        style="vertical-align: inherit;">1.布局使用</font></font></h4>
+<pre><code>&lt;com.mti.component.media.audio.AudioComponent<font></font>
+                    android:id="@+id/audioComponent"<font></font>
+                    style="@style/match_width" /&gt;</code></pre>
+<h4><font style="vertical-align: inherit;"><font
+        style="vertical-align: inherit;">2.添加监听事件</font></font></h4>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">初始化并添加监听，监听提供两个示例方法，分别是onItemDelete删除监听和onItemClick点击监听。
+</font></font></p>
+<pre><code>    override fun initViews(savedInstanceState: Bundle?) {<font></font>
+        val list = listOf&lt;String&gt;("红色", "黑色", "花边色", "深蓝色",<font></font>
+                "白色", "玫瑰红色", "紫黑紫兰色", "葡萄红色", "橘红色",<font></font>
+                "绿色", "彩虹色", "牡丹色")<font></font>
+<font></font>
+        val data = list.map { AudioLabelEntry("$it") }.toList()<font></font>
+        //初始化数据及添加监听事件<font></font>
+        audioComponent.init(this, data, this)<font></font>
+    }<font></font>
+<font></font>
+    //删除监听回调<font></font>
+    override fun onItemDelete(position: Int) {<font></font>
+    }<font></font>
+<font></font>
+    //点击监听回调<font></font>
+    override fun onItemClick(position: Int) {<font></font>
+    }</code></pre>
+<h4><font style="vertical-align: inherit;"><font
+        style="vertical-align: inherit;">3.音频录制与播放</font></font></h4>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供录制方法audioComponent.recordAudio（audioName，100）和播放方法audioComponent.playAudio（item.tagValue）。
+</font></font></p>
+<pre><code>    override fun initViews(savedInstanceState: Bundle?) {<font></font>
+        val list = listOf&lt;String&gt;("红色", "黑色", "花边色", "深蓝色",<font></font>
+                "白色", "玫瑰红色", "紫黑紫兰色", "葡萄红色", "橘红色",<font></font>
+                "绿色", "彩虹色", "牡丹色")<font></font>
+<font></font>
+        val data = list.map { AudioLabelEntry("$it") }.toList()<font></font>
+        //初始化数据及添加监听事件<font></font>
+        audioComponent.init(this, data, this)<font></font>
+<font></font>
+        //点击录制<font></font>
+        btnAudioRecord.setOnClickListener {<font></font>
+            val ext = "mti_" + System.currentTimeMillis() + ".wav"<font></font>
+            val audioName: String = AudioFileFunc.getAudioDir(this).toString() + File.separator + ext<font></font>
+            audioComponent.recordAudio(audioName, 100)<font></font>
+<font></font>
+            val tagEntry = AudioLabelEntry(ext)<font></font>
+            tagEntry.tagValue = audioName<font></font>
+            audioComponent.addData(tagEntry)<font></font>
+        }<font></font>
+    }<font></font>
+<font></font>
+    //点击监听回调<font></font>
+    override fun onItemClick(position: Int) {<font></font>
+        toast("点击了第${position}个位置")<font></font>
+        val item = audioComponent.getItemEntry(position)<font></font>
+        Log.d("AudioComponent--page-", "item.tagValue${item.tagValue}")<font></font>
+        //播放<font></font>
+        audioComponent.playAudio(item.tagValue)<font></font>
+    }</code></pre>
+</body>
+</html>

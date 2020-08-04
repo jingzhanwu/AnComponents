@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#e9e9e9"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/header"
+        style="@style/match_width"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/size_40"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layoutRiskLevelCondition"
+            style="@style/match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvRiskLevelCondition"
+                style="@style/wrap_content"
+                android:text="风险等级" />
+
+            <ImageView
+                android:layout_width="@dimen/size_12"
+                android:layout_height="@dimen/size_16"
+                android:layout_marginStart="@dimen/size_4"
+                android:src="@drawable/icon_arrow_down_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTimeCondition"
+            style="@style/match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTimeCondition"
+                style="@style/wrap_content"
+                android:text="时间排序" />
+
+            <ImageView
+                android:layout_width="@dimen/size_12"
+                android:layout_height="@dimen/size_16"
+                android:layout_marginStart="@dimen/size_4"
+                android:src="@drawable/icon_arrow_down_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutRiskTypeCondition"
+            style="@style/match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvRiskTypeCondition"
+                style="@style/wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="风险类型" />
+
+            <ImageView
+                android:layout_width="@dimen/size_12"
+                android:layout_height="@dimen/size_16"
+                android:layout_marginStart="@dimen/size_4"
+                android:src="@drawable/icon_arrow_down_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutRiskStatusCondition"
+            style="@style/match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvRiskStatusCondition"
+                style="@style/wrap_content"
+                android:text="风险状态" />
+
+            <ImageView
+                android:layout_width="@dimen/size_12"
+                android:layout_height="@dimen/size_16"
+                android:layout_marginStart="@dimen/size_4"
+                android:src="@drawable/icon_arrow_down_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="@dimen/size_10"
+            android:id="@+id/alarmRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <android.support.design.widget.FloatingActionButton
+            style="@style/wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="50dp"
+            android:layout_gravity="right|bottom"
+            android:clickable="true"
+            android:onClick="openStatistics"
+            android:src="@drawable/ic_statistics_schedule"
+            app:borderWidth="0dp"
+            app:elevation="10dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="#D81B60" />
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>
